@@ -19,8 +19,10 @@ Raw data can be found at ...
 
 2. Anotate reads using `jobsubmit-2.sh` for TRAV and `jobsubmit-3.sh` for TRBV genes. These scripts require MiXCR v2.1.12. 
 
-    `bash jobsubmit-2.sh reverse_reads.fastq-2 prefix`
-    `bash jobsubmit-3.sh forward_reads.fastq-1 prefix`
+    ```
+    bash jobsubmit-2.sh reverse_reads.fastq-2 prefix
+    bash jobsubmit-3.sh forward_reads.fastq-1 prefix
+    ```
 
 3. Once gene annotation is complete, we can stitch paired-end reads using `stitch_TRA-TRB.sh`
 
