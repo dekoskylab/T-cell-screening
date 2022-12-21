@@ -25,8 +25,6 @@ do
 done < "$EXPTNAME"uniqueHCntseqs_over1read.txt
 
 #Filter unique_pairs for seqs with >=2 reads
-#awk '{if($1>1)print}' "$EXPTNAME"unique_pairs.txt | sort -n -r > "$EXPTNAME"unique_pairs_over1read.txt
-
 
 #Shortclust workflow to account for shorter CDR-H3s
 	awk 'BEGIN {temp="AAAAAAAAAAAAAAAAAAAAAAAA"}; {pad=(26-length($2)); if(length($2)<26) print ">"$2 "_pad_" pad "\n" $2 substr(temp,1,pad)}' "$EXPTNAME"unique_pairs_over1read.txt > "$EXPTNAME"temp.fasta
@@ -51,17 +49,10 @@ awk -v exptname="$EXPTNAME" -F "\t"  'BEGIN {i=1}; {print ">" exptname "unique_f
 
 awk -v exptname="$EXPTNAME" -F "\t"  'BEGIN {i=1}; {print ">" exptname "unique_final_CDR-H3_Rank_" i "_" $1 "_reads_" $2 "_" $3 "_"  $4 "_" $5 "_" $6 "_" $7 "_" $8 "_" $9 "_" $10 "_" $11 "_" $12 "_" $13 "_" $14 " \n" $4; i=i+1}' "$EXPTNAME"unique_final.txt > "$EXPTNAME"unique_CDRH3_final.faa
 
-
-
-
-
-
-
 echo "$(date +%b-%d-%H:%M:%S)   Job complete."
 
 echo 'Total number of paired reads:'
 awk '{sum+=$1}; END {print sum}' "$RAW_CDR3ntpairs"
 
 echo 'Recovered unique pairs:'
-#wc -l "$EXPTNAME"unique_pairs.txt
 wc -l "$EXPTNAME"unique_final.txt
