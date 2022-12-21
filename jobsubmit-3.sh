@@ -1,3 +1,5 @@
+# This script is a wrapper for mixcr. It will annotate the forward reads that map to TRBV genes. 
+
 file=$1
 prefix=$2
 
