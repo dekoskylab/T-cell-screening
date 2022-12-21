@@ -1,9 +1,10 @@
 
+	### This script performs a quality filtering of Illumina reads using fastq_quality_filter, with a minimum score of 20 over 50% of the read. It then saves the filtered reads with a common experimental name.
+	
 	file1=$1
 	file2=$2
 	prefix=$3
 	
-
 	echo $file1
 	echo $file2
 	echo $prefix
