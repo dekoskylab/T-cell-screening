@@ -1,3 +1,5 @@
+# This script is a wrapper for mixcr. It will annotate the reverse reads that map to TRAV genes. 
+
 file=$1
 prefix=$2
 
