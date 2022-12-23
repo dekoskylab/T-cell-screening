@@ -28,9 +28,11 @@ Raw data can be found at ...
 
     `bash stitch_TRA-TRB.sh prefix`
   
-4. Processing
-5. Reads are prepared for clustering using `CDR3motif_search_v1.sh`
-6. Next, reads are clustered based on CDR3 identity using `CDR3motif_search_analysis_v3.1.sh`. This step requires `USEARCH` 
+4. Generate pair results by combing the reads of alpha and beta into complete chain information in one file based on mixcr sequence IDs. This is done by `processing.sh` script.
+
+        `processing.sh prefix`
+6. Reads are prepared for clustering using `CDR3motif_search_v1.sh`
+7. Next, reads are clustered based on CDR3 identity using `CDR3motif_search_analysis_v3.1.sh`. This step requires `USEARCH` 
 
     `bash CDR3motif_search_analysis_v3.1.sh prefix raw_reads`
   
