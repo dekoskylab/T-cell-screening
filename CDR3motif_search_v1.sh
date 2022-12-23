@@ -1,4 +1,7 @@
+#This script prepares TRB/TRA database for clustering:
 
+#1) this script generates raw clones by collapsing identical CDRB3 nt/aa sequences and reports their reads
+#2) using the output from step #1 to generate over1read database by excluding all clones with 1 read, this database is used later as an input for clustering step 
 
 EXPTNAME=$1
 
