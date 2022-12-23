@@ -1,3 +1,4 @@
+#This script generates TRA and TRB pair results by combing the reads of alpha and beta into complete chain information in one file based on mixcr sequence IDs.
 
 prefix=$1
 rm $prefix"_TRA_all_sorted"
