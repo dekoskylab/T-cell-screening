@@ -32,8 +32,13 @@ Raw data can be found at ...
 
     `processing.sh prefix`
         
-6. Reads are prepared for clustering using `CDR3motif_search_v1.sh`
-7. Next, reads are clustered based on CDR3 identity using `CDR3motif_search_analysis_v3.1.sh`. This step requires `USEARCH` 
+6. Reads are prepared for clustering using `CDR3motif_search_v1.sh`. This will aggregate reads with the same CDR3B nt/aa sequences and reports the number of reads. Next, it filters out clones with only one read. 
+
+
+    `CDR3motif_search_v1.sh prefix`
+    
+    
+8. Next, reads are clustered based on CDR3 identity using `CDR3motif_search_analysis_v3.1.sh`. This step requires `USEARCH` 
 
     `bash CDR3motif_search_analysis_v3.1.sh prefix raw_reads`
   
