@@ -1,7 +1,11 @@
 #!/bin/bash
-#
-#Process CDR3 motif nt results file _CDR3_nt_pairs.txt via clustering
-#Input:  CDR3pairing_analysis_v1.0.sh Expt_prefix EXPT_CDR3_nt_pairs.txt
+
+#This script generates unique CDR3 TRB/TRA clusters (clonotypes)
+
+#1) the script takes over1read database as an input and extract CDRB3 nt information 
+#2) cluster CDRB3 nt using 0.96 identity threshold and report the representative sequence for each cluster 
+#3) pair the CDRB3 nt representative sequences with the most dominant CDRA3 nt
+#4) report reads, CDRB3 nt, CDRA3 nt, CDRB3 aa, CDRA3 aa, and gene usage for each pair in the final report 
 
 EXPTNAME=$1
 RAW_CDR3ntpairs=$2
