@@ -13,7 +13,7 @@ Raw TCRα:β MiSeq data have been deposited in the NCBI Sequence Read Archive (S
 
 ## Usage
 
-1. Perform quality control with `qualityfilter_script_human_v1.1.sh` for forward and reverse reads. This script requires FASTX-Toolkit v0.0.14. A quality threshold of q20p50 was used.
+1. Perform quality control with `qualityfilter_script_human_v1.1.sh` for forward and reverse reads. This script requires FASTX-Toolkit v0.0.14. A quality threshold of q20p50 was used. A `prefix` name should be selected to match file names in the next steps. 
 
     `bash qualityfilter_script_human_v1.1.sh forward_reads.fastq reverse_reads.fastq prefix`
 
