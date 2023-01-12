@@ -9,11 +9,11 @@
 
 ## Data
 
-Raw data can be found at ...
+Raw TCRα:β MiSeq data have been deposited in the NCBI Sequence Read Archive (SRA) under accession number PRJNA827461.
 
 ## Usage
 
-1. Perform quality control with `qualityfilter_script_human_v1.1.sh` for forward and reverse reads. This script requires FASTX-Toolkit v0.0.14.
+1. Perform quality control with `qualityfilter_script_human_v1.1.sh` for forward and reverse reads. This script requires FASTX-Toolkit v0.0.14. A quality treshold of q20p50 was used.
 
     `bash qualityfilter_script_human_v1.1.sh forward_reads.fastq reverse_reads.fastq prefix`
 
