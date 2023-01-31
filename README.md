@@ -41,4 +41,39 @@ Raw TCRα:β MiSeq data have been deposited in the NCBI Sequence Read Archive (S
 8. Next, reads are clustered based on CDR3 identity using `CDR3motif_search_analysis_v3.1.sh`. This step requires `USEARCH` 
 
     `bash CDR3motif_search_analysis_v3.1.sh prefix raw_reads`
+    
+## Example
+
+1. Quality filter:
+
+	`bash qualityfilter_script_human_v1.1.sh Exp-name_R1_001.fastq Exp-name_R2_001.fastq Exp-name`
+
+2. Run MIXCR
+
+    ```
+	bash jobsubmit-3.sh Exp-name_r1_q20p50_filtered.fastq-1 Exp-name
+	bash jobsubmit-2.sh Exp-name_r2_q20p50_filtered.fastq-2 Exp-name
+    ```
+
+3. Stitch paired-end reads
+
+	`bash stitch_TRA-TRB.sh Exp-name`
+
+4. Reformate files 
+
+	`bash processing.sh Exp-name`
+
+5. Prep for CDR3B clustering  
+
+	`bash CDR3motif_search_v1.sh Exp-name`
+
+6. Run clustering script
+
+	`bash CDR3motif_search_analysis_v3.1.sh Exp-name Exp-name_nt_pairs_over1read.txt`
+
+7. Exp-name_unique_final.txt contains the final estimated Alpha:beta clonotypes  
+
+	`ls | grep unique_final | xargs wc -l`
+
+
   
