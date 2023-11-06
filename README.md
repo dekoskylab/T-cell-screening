@@ -1,4 +1,4 @@
-# Scripts for our upcoming functional TCR screening paper "Activation-Based Screening of Natively Paired Human T Cell Receptor Repertoires"
+# Scripts for our functional TCR screening paper: Fahad, A.S., Chung, C.Y., López Acevedo, S.N. et al. Cell activation-based screening of natively paired human T cell receptor repertoires. Sci Rep 13, 8011 (2023). https://doi.org/10.1038/s41598-023-31858-4
 
 ## Requirements
 
